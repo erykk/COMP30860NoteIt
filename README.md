@@ -1,0 +1,1 @@
+Both mockups are really bad, please suggest improvements
