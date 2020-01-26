@@ -1,0 +1,22 @@
+
+.navbar-search-inactive {
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	width: 50px;
+	outline: none;
+  border: solid 1px #ccc;
+}
+
+#navbar-search[type=search] {
+  outline: none;
+  height: 35px;
+  border-radius: 10px;
+	transition: all .5s;
+}
+
+.navbar-search-active {
+  border: solid 1px green;
+	width: 80%;
+	background-color: #fff;
+	border-color: #66CC75;
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
