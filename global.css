@@ -6,10 +6,13 @@
 	max-height: 250px;
 }
 
-.note-content {
-	padding: 10px;
-	width: 90%;
+.note p {
 	text-overflow: ellipsis;
+}
+
+.note-content {
+	width: 90%;
+	padding: 10px;
 	overflow: hidden;
 }
 
