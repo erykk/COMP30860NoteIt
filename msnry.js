@@ -7,3 +7,6 @@ var msnry = new Masonry( elem, {
   gutter: 20,
   fitWidth: true
 });
+window.addEventListener("resize", () => {
+	msnry.layout();
+})
