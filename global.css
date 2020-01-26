@@ -1,13 +1,9 @@
 .note {
 	display: flex;
 	padding: 0;
-	max-width: 600px;
+	width: 45vw;
+	min-width: 300px;
 	margin: 25px auto 0 auto;
-	max-height: 250px;
-}
-
-.note p {
-	text-overflow: ellipsis;
 }
 
 .note-content {
@@ -17,18 +13,27 @@
 }
 
 .note-sidebar {
-	width: 10%;
-	min-width: 50px;
+	width: 50px;
 	padding: 0;
 	margin: 0;
+	margin-right: 10px;
 	position: relative;
 	top: 0px;
 	right: 0px;
 }
 
+.note-sidebar button:first-child {
+	margin-top:20px;
+}
+
 .note-sidebar button {
-	border-radius: 0;
+	margin-bottom: 15px;
+	border-radius: 25px;
 	float: right;
 	height: 50px;
 	width: 50px;
+}
+
+.grid {
+	margin: 0 auto;
 }
