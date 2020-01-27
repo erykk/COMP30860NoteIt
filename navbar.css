@@ -8,15 +8,24 @@
 #navbar-search[type=search] {
 	outline: none;
 	height: 35px;
-	max-width: 80%;
 	border-radius: 10px;
 	transition: all .5s;
 }
 
 .navbar-search-active {
 	border: solid 1px green;
-	width: 80%;
+	width: 40%;
 	background-color: #fff;
 	border-color: #66CC75;
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+#no-wrap {
+	flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+	.navbar-search-active {
+		width: 80%;
+	}
 }
