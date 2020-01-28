@@ -45,3 +45,27 @@
 .note:hover > .note-sidebar {
 	opacity: 1;
 }
+
+#new-note-box {
+	height: 75px;
+	border-radius: 5px;
+}
+
+#new-note-box, #new-note-ta {
+	transition: height 0.1s ease-in-out;
+}
+
+#new-note-box:hover, #new-note-ta:hover {
+	height: 85px;
+}
+
+#new-note-box:focus, #new-note-ta:focus {
+	height: 200px;
+}
+
+#new-note-ta {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	border-radius: 5px;
+}
