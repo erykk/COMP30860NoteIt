@@ -1,44 +1,4 @@
-.note {
-	display: flex;
-	padding: 0;
-	width: 45vw;
-	min-width: 300px;
-	max-width: 500px;
-	margin: 25px auto 0 auto;
-	transition: box-shadow 0.2s ease-in;
-}
 
-.note:hover {
-	box-shadow: 1px 1px 5px #ccc;
-}
-
-.note-content {
-	width: 90%;
-	padding: 10px;
-	overflow: hidden;
-}
-
-.note-sidebar {
-	width: 50px;
-	padding: 0;
-	margin: 0;
-	margin-right: 10px;
-	position: relative;
-	top: 0px;
-	right: 0px;
-}
-
-.note-sidebar button:first-child {
-	margin-top:20px;
-}
-
-.note-sidebar button {
-	margin-bottom: 15px;
-	border-radius: 25px;
-	float: right;
-	height: 50px;
-	width: 50px;
-}
 
 .grid {
 	margin: 0 auto;

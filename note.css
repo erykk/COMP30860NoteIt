@@ -3,7 +3,13 @@
 	padding: 0;
 	width: 45vw;
 	min-width: 300px;
+	max-width: 500px;
 	margin: 25px auto 0 auto;
+	transition: all 0.2s ease-in;
+}
+
+.note:hover {
+	box-shadow: 1px 1px 5px #ccc;
 }
 
 .note-content {
@@ -13,6 +19,7 @@
 }
 
 .note-sidebar {
+	opacity: 0;
 	width: 50px;
 	padding: 0;
 	margin: 0;
@@ -20,6 +27,7 @@
 	position: relative;
 	top: 0px;
 	right: 0px;
+	transition: all 0.1s ease-in;
 }
 
 .note-sidebar button:first-child {
@@ -32,4 +40,8 @@
 	float: right;
 	height: 50px;
 	width: 50px;
+}
+
+.note:hover > .note-sidebar {
+	opacity: 1;
 }
