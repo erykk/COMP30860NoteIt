@@ -5,7 +5,7 @@ var notes  = [];
  * A JavaScript object that handles all note functions. Inclusing editing, deleting and creating of notes.
  * @param ele The base note element that this object represents.
  */
-function note(ele) {
+function Note(ele) {
 	/*
 		Quick rundown on how the JavaScript works here.
 		We're using "note(ele)" to create an object. The arguments to this function are basically the constructor arguments, except that they are accessable throughout the entire object for its entire lifespan (while with Java, unless they're saved to local variables they're lost after the object is constructed.).
@@ -16,33 +16,20 @@ function note(ele) {
 		
 		tl;dr: Use "this.identifier = ..." to create a public identifier. Use "[let|var|const] identifier = ..." to create a private identifier.
 	*/
-	let sidebar = ele.getElementsByClassName("note-sidebar")[0]
+	let sidebar = ele.find(".note-sidebar")
 	
 	this.remove = function() {
-		ele.parentNode.removeChild(ele);
-		for (let i = 0; i < notes.length; i++) {
-			if (notes[i] == this) {
-				notes.splice(i, 1)
-			}
-		}
+		ele.remove();
 		msnry.layout();
 	}
 	
-	sidebar.getElementsByClassName("btn btn-outline-danger")[0].addEventListener("click", this.remove)
+	sidebar.find(".btn.btn-outline-danger").on("click", this.remove)
 }
 
 function createNoteObjects() {
-	let grid = document.getElementById("grid");
-	for (let i = 0; i < grid.childNodes.length; i++) {
-		let child = grid.childNodes[i];
-		if (child.nodeType != Node.ELEMENT_NODE) {
-			// We're not interested in text nodes etc.
-			continue;
-		}
-		if (!child.className.startsWith("note")) {
-			throw "Unexpected class type: " + child.className;
-		}
-		notes.push(new note(child));
-	}
+	let grid = $("#grid");
+	grid.children(".note").each(function(i) {
+		notes.push(new Note($(this)))
+	});
 }
 createNoteObjects();
